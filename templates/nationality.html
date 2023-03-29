@@ -1,0 +1,19 @@
+<!--Nationality Template-->
+<!doctype html>
+<title>Your Nationality from your Name:</title>
+<nav>
+  <!--Connect the name variable to the template:-->
+  <h1>Hello {{name}}, I guess your nationality is:</h1>
+</nav>
+<section class="content">
+  <header>
+    Possible Nationalities from most probable to least probable:
+    <br><br>
+  </header>
+  <!--Loop through the countries variable:-->
+  {% for country in countries %}
+    <!--Display the countries:-->
+    <div class="flash"><b>{{ country }}</b></div>
+    <br>
+  {% endfor %}
+</section>

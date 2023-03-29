@@ -1,0 +1,19 @@
+<!--Jokes template:-->
+<!doctype html>
+<title>Jokes</title>
+<nav>
+  <!--Connect the category variable to the template:-->
+  <h1>I have this {{category}} jokes for you:</h1>
+</nav>
+<section class="content">
+  <header>
+    JOKES:
+    <br><br>
+  </header>
+  <!--Loop through the jokes variable:-->
+  {% for message in jokes %}
+    <!--Display the jokes:-->
+    <div class="flash"><b>{{ message }}</b></div>
+    <br>
+  {% endfor %}
+</section>
