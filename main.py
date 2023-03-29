@@ -25,8 +25,11 @@ def showJokes():
     for ele in data['result']:
         jokes.append(ele['value'])
     
+    context = {"jokes": jokes, "category": query}
+    
     #render the template
-    return render_template('jokes.html', jokes=jokes, category=query)
+    
+    return render_template('jokes.html', **context)
 
 #second endpoint
 @app.route('/nationbyname/')
